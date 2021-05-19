@@ -1,0 +1,47 @@
+// https://guide.taskpaper.com/using-taskpaper/using-stylesheets.html
+// https://guide.taskpaper.com/reference/stylesheets/
+
+@font-family: Menlo;
+@light-background-color: #F7F0E3;
+@dark-background-color: #111;
+@dark-link-text-color: red;
+
+item[data-done] {
+  color: mix(@text-color, @background-color, 40%);
+  > run[content] {
+    text-strikethrough-color: mix(@text-color, @background-color, 40%);
+    // color: fade(@text-color, 20%);
+  }
+}
+
+item[data-type="project"] {
+  font-weight: bold;
+  color: mix(@text-color, #4A015A, 50%);
+}
+
+item[data-type="note"] {
+  font-style: normal;
+  color: mix(@text-color, @background-color, 50%);
+}
+
+run[link] {
+  cursor: pointer;
+  color: mix(@text-color, #00015A, 50%);
+}
+
+run[link^="button"] {
+  color: mix(@text-color, @background-color, 30%);
+  text-expansion: 0.3;
+  text-decoration: none;
+}
+
+run[tag] {
+  font-style: normal;
+  font-weight: normal;
+  color: mix(@text-color, #005A01, 50%);
+}
+
+editor {
+  item-indent: 8px + $USER_FONT_SIZE;
+  caret-width: 2px;
+}

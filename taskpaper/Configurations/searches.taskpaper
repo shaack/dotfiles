@@ -1,0 +1,8 @@
+This is a configuration outline. Use it to store searches that you want to show in the sidebar for all TaskPaper documents.
+
+Searches:
+	Overview @search(project except Archive///*)
+	Expand Tasks @search(\(task except Archive///*\) union \(project except Archive///*\))
+	Next @search(@today///* except Archive///* union @next///* except Archive///* union @due <=[d] tomorrow +7d except Archive///*  union @start <=[d] today except Archive///*)
+	Today @search(@today///* except Archive///* union @due <=[d] tomorrow except Archive///*)
+

@@ -1,0 +1,12 @@
+# REDAXO
+# ignoriere die Config, den Cache-Ordner und alle Media-Files
+/redaxo/include/generated
+/redaxo/include/master.inc.php
+/files/*
+
+# Keine Node-Module versionieren!
+# Unnötig groß für ein Repo, und sie kommen ja per npm/yarn.
+/node_modules
+
+# IDE config, brauchen wir nicht in diesem Projekt
+.idea

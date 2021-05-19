@@ -1,0 +1,6 @@
+/.idea
+/redaxo/cache
+/redaxo/data/core/*.log
+/redaxo/data/core/config.yml
+/node_modules
+/media
