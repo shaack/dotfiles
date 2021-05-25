@@ -6,24 +6,20 @@
 @dark-background-color: #111;
 @dark-link-text-color: red;
 
-item[data-done] {
-  color: mix(@text-color, @background-color, 40%);
-  > run[content] {
-    text-strikethrough-color: mix(@text-color, @background-color, 40%);
-    // color: fade(@text-color, 20%);
-  }
-}
-
 item[data-due] {
-  color: mix(@text-color, @background-color, 60%);
+  color: mix(@text-color, @background-color, 75%);
 }
 
 item[data-ok], item[data-green] {
   color: mix(#00DD00, @text-color, 70%);
 }
 
+item[data-today], item[data-yellow] {
+  color: mix(#EEEE00, @text-color, 70%);
+}
+
 item[data-inquire], item[data-orange] {
-  color: mix(#FF9900, @text-color, 70%);
+  color: mix(#FF7700, @text-color, 70%);
 }
 
 item[data-fail], item[data-danger], item[data-red] {
@@ -38,6 +34,14 @@ item[data-type="project"] {
 item[data-type="note"] {
   font-style: normal;
   color: mix(@text-color, @background-color, 50%);
+}
+
+item[data-done] {
+  color: mix(@text-color, @background-color, 40%);
+  > run[content] {
+    text-strikethrough-color: mix(@text-color, @background-color, 40%);
+    // color: fade(@text-color, 20%);
+  }
 }
 
 run[link] {
