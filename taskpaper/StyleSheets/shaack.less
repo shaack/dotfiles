@@ -14,9 +14,25 @@ item[data-done] {
   }
 }
 
+item[data-due] {
+  color: mix(@text-color, @background-color, 60%);
+}
+
+item[data-ok], item[data-green] {
+  color: mix(#00DD00, @text-color, 70%);
+}
+
+item[data-inquire], item[data-orange] {
+  color: mix(#FF9900, @text-color, 70%);
+}
+
+item[data-fail], item[data-danger], item[data-red] {
+  color: mix(#FF0000, @text-color, 70%);
+}
+
 item[data-type="project"] {
   font-weight: bold;
-  color: mix(@text-color, #4A015A, 50%);
+  color: mix(#5e0072, @text-color, 60%);
 }
 
 item[data-type="note"] {
