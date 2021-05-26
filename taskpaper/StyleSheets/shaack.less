@@ -6,10 +6,6 @@
 @dark-background-color: #111;
 @dark-link-text-color: red;
 
-item[data-Haack] {
-  color: mix(#00DDDD, @text-color, 50%);
-}
-
 item[data-due] {
   color: mix(@text-color, @background-color, 75%);
 }
@@ -44,6 +40,7 @@ item[data-done] {
   color: mix(@text-color, @background-color, 40%);
   > run[content] {
     text-strikethrough-color: mix(@text-color, @background-color, 40%);
+    // color: fade(@text-color, 20%);
   }
 }
 
@@ -59,9 +56,11 @@ run[link^="button"] {
 }
 
 run[tag] {
-  font-style: normal;
-  font-weight: normal;
   color: mix(@text-color, #005A01, 50%);
+}
+
+run[tag="data-Haack"] {
+  color: mix(@text-color, #005A77, 50%);
 }
 
 editor {
