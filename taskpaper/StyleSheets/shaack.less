@@ -6,44 +6,6 @@
 @dark-background-color: #111;
 @dark-link-text-color: red;
 
-item[data-due] {
-  color: mix(@text-color, @background-color, 75%);
-}
-
-item[data-ok], item[data-green] {
-  color: mix(#00DD00, @text-color, 50%);
-}
-
-item[data-today], item[data-yellow], item[data-todo] {
-  color: mix(#EEEE00, @text-color, 50%);
-}
-
-item[data-resolve], item[data-inquire], item[data-orange], item[data-important] {
-  color: mix(#FF7700, @text-color, 60%);
-}
-
-item[data-fail], item[data-danger], item[data-red] {
-  color: mix(#FF0000, @text-color, 50%);
-}
-
-item[data-type="project"] {
-  font-weight: bold;
-  color: mix(#5e0072, @text-color, 60%);
-}
-
-item[data-type="note"] {
-  font-style: normal;
-  color: mix(@text-color, @background-color, 50%);
-}
-
-item[data-done] {
-  color: mix(@text-color, @background-color, 40%);
-  > run[content] {
-    text-strikethrough-color: mix(@text-color, @background-color, 40%);
-    // color: fade(@text-color, 20%);
-  }
-}
-
 run[link] {
   cursor: pointer;
   color: mix(@text-color, #00015A, 50%);
@@ -66,4 +28,45 @@ run[tag="data-Haack"] {
 editor {
   item-indent: 8px + $USER_FONT_SIZE;
   caret-width: 2px;
+}
+
+item[data-due] {
+  color: mix(@text-color, @background-color, 75%);
+}
+
+item[data-ok], item[data-green] {
+  color: mix(#00DD00, @text-color, 50%);
+}
+
+item[data-today], item[data-yellow], item[data-todo], item[data-urgent] {
+  color: mix(#EEEE00, @text-color, 50%);
+}
+
+item[data-resolve], item[data-inquire], item[data-orange], item[data-important] {
+  color: mix(#FF7700, @text-color, 60%);
+}
+
+item[data-fail], item[data-danger], item[data-red], item[data-urgent][data-important] {
+  color: mix(#FF0000, @text-color, 60%);
+}
+
+item[data-type="project"] {
+  font-weight: bold;
+  color: mix(#5e0072, @text-color, 60%);
+}
+
+item[data-type="note"] {
+  font-style: normal;
+  color: mix(@text-color, @background-color, 50%);
+}
+
+item[data-done] {
+  color: mix(@text-color, @background-color, 40%);
+  > run[content] {
+    text-strikethrough-color: mix(@text-color, @background-color, 40%);
+    color: fade(@text-color, 30%);
+  }
+  > run[tag] {
+    color: fade(@text-color, 30%);
+  }
 }
