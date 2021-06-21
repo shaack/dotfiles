@@ -62,10 +62,10 @@ item[data-type="note"] {
 
 item[data-done] {
   > run[content] {
-    text-strikethrough-color: fade(@text-color, 30%);
-    color: fade(@text-color, 30%);
+    text-strikethrough-color: mix(@text-color, @background-color, 30%);
+    color: mix(@text-color, @background-color, 30%);
   }
   > run[tag] {
-    color: fade(@text-color, 30%);
+    color: mix(@text-color, @background-color, 30%);
   }
 }
