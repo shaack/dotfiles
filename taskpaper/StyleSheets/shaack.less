@@ -14,7 +14,7 @@ item[data-ok], item[data-green] {
   color: mix(#00DD00, @text-color, 50%);
 }
 
-item[data-today], item[data-yellow], item[data-todo] {
+item[data-today], item[data-yellow], item[data-todo], item[data-urgent] {
   color: mix(#EEEE00, @text-color, 50%);
 }
 
@@ -22,8 +22,8 @@ item[data-resolve], item[data-inquire], item[data-orange], item[data-important] 
   color: mix(#FF7700, @text-color, 60%);
 }
 
-item[data-fail], item[data-danger], item[data-red] {
-  color: mix(#FF0000, @text-color, 50%);
+item[data-fail], item[data-danger], item[data-red], item[data-urgent][data-important] {
+  color: mix(#FF0000, @text-color, 60%);
 }
 
 item[data-type="project"] {
@@ -37,10 +37,10 @@ item[data-type="note"] {
 }
 
 item[data-done] {
-  color: mix(@text-color, @background-color, 40%);
+  /* color: mix(@text-color, @background-color, 40%); */
   > run[content] {
     text-strikethrough-color: mix(@text-color, @background-color, 40%);
-    // color: fade(@text-color, 20%);
+    color: fade(@text-color, 30%);
   }
 }
 
